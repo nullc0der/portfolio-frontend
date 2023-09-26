@@ -4,4 +4,19 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  :global {
+    .info-texts {
+      margin-right: 2rem;
+      .hello-world {
+        background-color: var(--primary);
+        padding: 0.5rem 1rem;
+        .text {
+          color: var(--text);
+        }
+      }
+    }
+    .avatar {
+      margin-left: 2rem;
+    }
+  }
 }

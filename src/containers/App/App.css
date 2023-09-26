@@ -1,12 +1,19 @@
 @import "purecss/build/pure-min.css";
+@import "purecss/build/grids-responsive-min.css";
 
 :root {
+  --text: #f8f9fa;
+  --background: #22262a;
+  --primary: #a6c2de;
+  --secondary: #0f141a;
+  --accent: #5087be;
+
   font-family: "Inter", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #000000;
+  color: var(--text);
+  background-color: var(--background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,4 +31,44 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   height: 100%;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.flex-1 {
+  flex: 1;
 }

@@ -1,9 +1,12 @@
 import { useEffect, useRef } from "react";
+import * as classnames from "classnames";
 
 import avatarImage from "@/assets/avatar.png";
 import styles from "./Avatar.module.css";
 
-export default function Avatar() {
+type AvatarProps = { classNames?: string };
+
+export default function Avatar({ classNames }: AvatarProps) {
   const imageContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -60,7 +63,10 @@ export default function Avatar() {
   };
 
   return (
-    <div className={styles.container} ref={imageContainerRef}>
+    <div
+      className={classnames(styles.container, classNames)}
+      ref={imageContainerRef}
+    >
       <img src={avatarImage} className="avatar-img" />
     </div>
   );

@@ -21,9 +21,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
-
-    // TODO: Module resolution, path alias
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": { "classnameTransform": "camelCaseOnly" }
+      }
+    ],
 
     "paths": {
       "@/*": ["./src/*"]

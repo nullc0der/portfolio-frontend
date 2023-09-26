@@ -1,0 +1,23 @@
+.container {
+  min-width: 350px;
+  :global {
+    .text {
+      font-size: 2rem;
+      .cursor {
+        margin-left: 2px;
+        & :local {
+          animation: blinkCursor 500ms linear infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
