@@ -4,19 +4,27 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  max-width: 80rem;
   :global {
     .info-texts {
-      margin-right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
       .hello-world {
+        border-radius: 0.25rem;
         background-color: var(--primary);
-        padding: 0.5rem 1rem;
+        padding: 2rem 1rem;
+      }
+      .title {
+        font-size: 3rem;
+        font-weight: 600;
+      }
+      .position {
         .text {
-          color: var(--text);
+          font-size: 1.5rem;
+          font-weight: 400;
         }
       }
-    }
-    .avatar {
-      margin-left: 2rem;
     }
   }
 }

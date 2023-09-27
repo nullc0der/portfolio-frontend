@@ -1,8 +1,9 @@
 .container {
-  min-width: 350px;
+  max-width: max-content;
   :global {
     .text {
       font-size: 2rem;
+      font-weight: 600;
       .cursor {
         margin-left: 2px;
         & :local {

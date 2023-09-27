@@ -4,12 +4,12 @@
 :root {
   --text: #f8f9fa;
   --background: #22262a;
-  --primary: #a6c2de;
+  --primary: #b9b9c1;
   --secondary: #0f141a;
-  --accent: #5087be;
+  --accent: #857d8c;
 
   font-family: "Inter", sans-serif;
-  line-height: 1.5;
+  line-height: 1;
   font-weight: 400;
 
   color: var(--text);
@@ -49,6 +49,35 @@ pre {
   margin: 0;
 }
 
+.container {
+  width: 100%;
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+  @media (min-width: 1536px) {
+    max-width: 1536px;
+  }
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -67,6 +96,10 @@ pre {
 
 .justify-content-end {
   justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
 }
 
 .flex-1 {

@@ -1,0 +1,11 @@
+.container {
+  font-size: 3rem;
+  font-weight: 600;
+  :global {
+    span {
+      background: linear-gradient(120deg, var(--primary), var(--accent));
+      background-clip: text;
+      color: transparent;
+    }
+  }
+}

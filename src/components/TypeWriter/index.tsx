@@ -73,7 +73,9 @@ function Writer({
   return (
     <p className="text">
       {textVisible}
-      <span className="cursor">{cursor}</span>
+      <span className="cursor">
+        {deleteLine ? cursor : textVisible === line ? "" : cursor}
+      </span>
     </p>
   );
 }
