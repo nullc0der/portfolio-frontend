@@ -1,4 +1,3 @@
-import * as classnames from "classnames";
 import { Send, Linkedin, GitHub, Phone, Mail } from "react-feather";
 
 import Avatar from "@/components/Avatar";
@@ -9,9 +8,9 @@ import styles from "./Home.module.css";
 
 export default function Home() {
   return (
-    <div className={classnames(styles.container, "container", "mx-auto")}>
+    <div className={styles.container}>
       <div className="pure-g w-100">
-        <div className="pure-u-1 pure-u-md-1-2 d-flex">
+        <div className="pure-u-1 pure-u-lg-1-2 d-flex info-texts-wrapper">
           <div className="info-texts">
             <TypeWriter
               lines={[
@@ -62,8 +61,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="pure-u-1 pure-u-md-1-2 d-flex justify-content-center">
-          <Avatar classNames="avatar" />
+        <div className="pure-u-1 pure-u-lg-1-2 d-flex align-items-center justify-content-center avatar-wrapper">
+          <Avatar />
         </div>
       </div>
     </div>

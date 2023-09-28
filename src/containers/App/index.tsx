@@ -5,7 +5,9 @@ import Home from "@/pages/Home";
 function App() {
   return (
     <div className="app-main">
-      <Home />
+      <div className="container mx-auto">
+        <Home />
+      </div>
     </div>
   );
 }

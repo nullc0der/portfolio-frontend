@@ -5,7 +5,31 @@
   justify-content: center;
   height: 100vh;
   max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @media (min-width: 640px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   :global {
+    .info-texts-wrapper {
+      order: 2;
+      @media (min-width: 1024px) {
+        order: 1;
+      }
+    }
+    .avatar-wrapper {
+      order: 1;
+      margin-bottom: 4rem;
+      @media (min-width: 1024px) {
+        order: 2;
+        margin-bottom: 0;
+      }
+    }
     .info-texts {
       display: flex;
       flex-direction: column;
@@ -14,6 +38,12 @@
         border-radius: var(--border-radius-xs);
         background-color: var(--primary);
         padding: 2rem 1rem;
+        .text {
+          font-size: 1rem;
+          @media (min-width: 768px) {
+            font-size: 2rem;
+          }
+        }
       }
       .title {
         font-size: 3rem;
