@@ -24,12 +24,13 @@ export default function Navbar() {
   return (
     <div className={styles.container}>
       {!showMenu && (
-        <Menu
-          className="feather-icon open-menu-btn"
-          onClick={() => {
-            setShowMenu(true);
-          }}
-        />
+        <div className="feather-icon open-menu-btn">
+          <Menu
+            onClick={() => {
+              setShowMenu(true);
+            }}
+          />
+        </div>
       )}
       <div className="navbar-items">
         {navbarItems.map((navbarItem, index) => (
@@ -40,18 +41,21 @@ export default function Navbar() {
               classnames("navbar-item", { active: isActive })
             }
           >
-            <navbarItem.icon className="feather-icon" size={16} />{" "}
+            <div className="feather-icon">
+              <navbarItem.icon size={14} />
+            </div>
             <span>{navbarItem.name}</span>
           </NavLink>
         ))}
       </div>
       <div className={classnames("navbar-menu", { show: showMenu })}>
-        <X
-          className="feather-icon close-menu-btn"
-          onClick={() => {
-            setShowMenu(false);
-          }}
-        />
+        <div className="feather-icon close-menu-btn">
+          <X
+            onClick={() => {
+              setShowMenu(false);
+            }}
+          />
+        </div>
         {navbarItems.map((navbarItem, index) => (
           <NavLink
             to={navbarItem.link}
@@ -60,7 +64,9 @@ export default function Navbar() {
               classnames("navbar-menu-item", { active: isActive })
             }
           >
-            <navbarItem.icon className="feather-icon" size={24} />{" "}
+            <div className="feather-icon">
+              <navbarItem.icon size={22} />
+            </div>{" "}
             <span>{navbarItem.name}</span>
           </NavLink>
         ))}

@@ -69,9 +69,6 @@
             transform: translate(-3px, -5px);
             box-shadow: 0 20px 80px -10px var(--primary);
           }
-          .feather-icon {
-            margin-right: 0.25rem;
-          }
         }
         .contact-link {
           color: var(--accent);

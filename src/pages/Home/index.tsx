@@ -30,7 +30,9 @@ export default function Home() {
             />
             <div className="contact-buttons d-flex align-items-center">
               <button className="button contact-button">
-                <Send size={18} className="feather-icon" />
+                <div className="feather-icon">
+                  <Send size={18} />
+                </div>
                 Contact Me
               </button>
               <a
@@ -39,7 +41,9 @@ export default function Home() {
                 className="contact-link"
                 rel="noreferrer"
               >
-                <Linkedin size={18} className="feather-icon" />
+                <div className="feather-icon">
+                  <Linkedin size={18} />
+                </div>
               </a>
               <a
                 href="https://github.com/nullc0der/"
@@ -47,16 +51,22 @@ export default function Home() {
                 className="contact-link"
                 rel="noreferrer"
               >
-                <GitHub size={18} className="feather-icon" />
+                <div className="feather-icon">
+                  <GitHub size={18} />
+                </div>
               </a>
               <a href="tel:+919954707983" className="contact-link">
-                <Phone size={18} className="feather-icon" />
+                <div className="feather-icon">
+                  <Phone size={18} />
+                </div>
               </a>
               <a
                 href="mailto:prasantakakati1994@gmail.com"
                 className="contact-link"
               >
-                <Mail size={18} className="feather-icon" />
+                <div className="feather-icon">
+                  <Mail size={18} />
+                </div>
               </a>
             </div>
           </div>

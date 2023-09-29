@@ -15,10 +15,6 @@
         color: var(--accent);
         transition: transform 0.3s ease-in-out;
         text-decoration: none;
-        .feather-icon {
-          margin-right: 0.25rem;
-          vertical-align: bottom;
-        }
         span {
           position: relative;
         }
@@ -73,10 +69,6 @@
         color: var(--accent);
         text-decoration: none;
         font-size: 1.5rem;
-        .feather-icon {
-          margin-right: 0.25rem;
-          vertical-align: top;
-        }
         span {
           position: relative;
         }

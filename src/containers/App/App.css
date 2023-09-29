@@ -90,7 +90,8 @@ button {
 
 .feather-icon {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  margin-right: 0.25rem;
 }
 
 .mx-auto {
