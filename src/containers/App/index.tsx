@@ -1,12 +1,21 @@
+import { Outlet, useNavigation } from "react-router-dom";
+import * as classnames from "classnames";
+
+import Navbar from "@/components/Navbar";
 import "./App.css";
 
-import Home from "@/pages/Home";
-
 function App() {
+  const navigation = useNavigation();
+
   return (
     <div className="app-main">
-      <div className="container mx-auto">
-        <Home />
+      <Navbar />
+      <div
+        className={classnames("container", "mx-auto", "main-content", {
+          loading: navigation.state === "loading",
+        })}
+      >
+        <Outlet />
       </div>
     </div>
   );
