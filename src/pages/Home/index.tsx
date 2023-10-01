@@ -1,14 +1,19 @@
+import { useNavigate } from "react-router-dom";
+import * as classnames from "classnames";
 import { Send, Linkedin, GitHub, Phone, Mail } from "react-feather";
 
 import Avatar from "@/components/Avatar";
 import TypeWriter from "@/components/TypeWriter";
 import RotateToText from "@/components/RotateToText";
+import Button from "@/components/Button";
 
 import styles from "./Home.module.css";
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
-    <div className={styles.container}>
+    <div className={classnames(styles.container, "page-container")}>
       <div className="pure-g w-100">
         <div className="pure-u-1 pure-u-lg-1-2 d-flex info-texts-wrapper">
           <div className="info-texts">
@@ -29,21 +34,22 @@ export default function Home() {
               classNames="position"
             />
             <div className="contact-buttons d-flex align-items-center">
-              <button className="button contact-button">
-                <div className="feather-icon">
-                  <Send size={18} />
-                </div>
+              <Button
+                classNames="contact-button"
+                onClick={() => {
+                  navigate("/contact");
+                }}
+              >
+                <Send size={16} className="feather-icon" />
                 Contact Me
-              </button>
+              </Button>
               <a
                 href="https://www.linkedin.com/in/prasantak/"
                 target="_blank"
                 className="contact-link"
                 rel="noreferrer"
               >
-                <div className="feather-icon">
-                  <Linkedin size={18} />
-                </div>
+                <Linkedin size={18} className="feather-icon" />
               </a>
               <a
                 href="https://github.com/nullc0der/"
@@ -51,22 +57,16 @@ export default function Home() {
                 className="contact-link"
                 rel="noreferrer"
               >
-                <div className="feather-icon">
-                  <GitHub size={18} />
-                </div>
+                <GitHub size={18} className="feather-icon" />
               </a>
               <a href="tel:+919954707983" className="contact-link">
-                <div className="feather-icon">
-                  <Phone size={18} />
-                </div>
+                <Phone size={18} className="feather-icon" />
               </a>
               <a
                 href="mailto:prasantakakati1994@gmail.com"
                 className="contact-link"
               >
-                <div className="feather-icon">
-                  <Mail size={18} />
-                </div>
+                <Mail size={18} className="feather-icon" />
               </a>
             </div>
           </div>

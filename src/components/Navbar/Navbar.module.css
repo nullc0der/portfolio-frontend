@@ -12,15 +12,16 @@
         gap: 1rem;
       }
       .navbar-item {
-        color: var(--accent);
-        transition: transform 0.3s ease-in-out;
+        color: var(--text);
+        opacity: 0.8;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
         text-decoration: none;
         span {
           position: relative;
         }
         &.active,
         &:hover {
-          color: var(--text);
+          opacity: 1;
           span {
             &::after {
               position: absolute;

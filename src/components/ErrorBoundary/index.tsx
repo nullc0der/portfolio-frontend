@@ -4,9 +4,10 @@ import {
   useNavigate,
   useRouteError,
 } from "react-router-dom";
-
-import styles from "./ErrorBoundary.module.css";
 import { Home } from "react-feather";
+
+import Button from "@/components/Button";
+import styles from "./ErrorBoundary.module.css";
 
 export default function ErrorBoundary() {
   const error = useRouteError();
@@ -22,17 +23,15 @@ export default function ErrorBoundary() {
       ) : (
         <p>Unknown error occurred</p>
       )}
-      <button
-        className="home-btn"
+      <Button
+        classNames="home-btn"
         onClick={() => {
           navigate("/");
         }}
       >
-        <div className="feather-icon">
-          <Home size={18} />
-        </div>
+        <Home size={16} className="feather-icon" />
         <span>Take me home</span>
-      </button>
+      </Button>
     </div>
   );
 }

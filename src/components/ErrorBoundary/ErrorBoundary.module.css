@@ -5,7 +5,6 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  gap: 1rem;
   :global {
     h1 {
       font-size: 8rem;
@@ -14,13 +13,8 @@
       font-size: 2rem;
     }
     .home-btn {
-      margin-top: 2rem;
-      padding: 1rem 1.5rem;
-      border-radius: var(--border-radius-sm);
-      background-color: var(--primary);
-      color: var(--text);
+      margin-top: 0.5rem;
       transition: transform 0.3s ease-in-out;
-      font-size: 1.25rem;
       &:hover {
         transform: translate(0, -5px);
       }

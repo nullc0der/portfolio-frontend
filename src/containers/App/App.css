@@ -8,13 +8,15 @@
   --secondary: #0f141a;
   --accent: #857d8c;
 
+  --error: #ef5350;
+
   --border-radius-xs: 0.25rem;
   --border-radius-sm: 0.5rem;
 
   --navbar-height: 4rem;
 
   font-family: "Inter", sans-serif;
-  line-height: 1;
+  line-height: 1.5;
   font-weight: 400;
 
   color: var(--text);
@@ -82,16 +84,33 @@ pre {
   }
 }
 
-button {
-  border: none;
-  cursor: pointer;
-  line-height: 1;
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 80rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+  @media (min-width: 640px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .feather-icon {
   display: inline-block;
-  vertical-align: top;
   margin-right: 0.25rem;
+}
+
+a {
+  .feather-icon {
+    vertical-align: text-top;
+  }
 }
 
 .mx-auto {

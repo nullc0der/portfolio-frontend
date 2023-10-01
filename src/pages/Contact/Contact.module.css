@@ -1,0 +1,104 @@
+.container {
+  gap: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  @media (min-width: 768px) {
+    padding-top: 5rem;
+  }
+  :global {
+    .welcome {
+      order: 2;
+      @media (min-width: 768px) {
+        order: 1;
+      }
+    }
+    .contact-img-wrapper {
+      order: 1;
+      @media (min-width: 768px) {
+        order: 2;
+      }
+    }
+    h1,
+    h2,
+    h4 {
+      font-weight: 400;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    .contact-img {
+      width: 128px;
+      height: 128px;
+      align-self: center;
+      @media (min-width: 768px) {
+        width: 256px;
+        height: 256px;
+      }
+    }
+    .connect-card {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      &:nth-child(odd) {
+        margin-right: 1rem;
+      }
+      &:nth-child(even) {
+        margin-left: 1rem;
+      }
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .header {
+        font-size: 2.5rem;
+      }
+      .form {
+        max-width: 50rem;
+        width: 100%;
+        .input-group {
+          padding: 0.5rem 0;
+          .label {
+            display: block;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+          }
+          .input {
+            padding: 2rem 2.75rem;
+            /* 100% - left/right padding */
+            width: calc(100% - 5.5rem);
+            background-color: rgba(15, 20, 26, 0.5);
+            border: none;
+            border-radius: var(--border-radius-sm);
+            color: var(--text);
+            font-size: 1.125rem;
+            font-weight: 500;
+            &:focus {
+              outline: 2px solid var(--accent);
+            }
+          }
+          &.has-error {
+            .label {
+              color: var(--error);
+            }
+            .input {
+              outline: 2px solid var(--error);
+            }
+            .error-text {
+              display: block;
+              margin-top: 0.5rem;
+              color: var(--error);
+            }
+          }
+        }
+        .action-buttons {
+          gap: 1rem;
+          padding-top: 1rem;
+          .reset-button {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+          }
+        }
+      }
+    }
+  }
+}

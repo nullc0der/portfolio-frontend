@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as classnames from "classnames";
 import { NavLink } from "react-router-dom";
-import { Code, FileText, Home, Send, type Icon, Menu, X } from "react-feather";
+import { Code, FileText, Home, Send, Menu, X, type Icon } from "react-feather";
 
 import styles from "./Navbar.module.css";
 
@@ -24,8 +24,9 @@ export default function Navbar() {
   return (
     <div className={styles.container}>
       {!showMenu && (
-        <div className="feather-icon open-menu-btn">
+        <div className="open-menu-btn">
           <Menu
+            className="feather-icon"
             onClick={() => {
               setShowMenu(true);
             }}
@@ -41,16 +42,15 @@ export default function Navbar() {
               classnames("navbar-item", { active: isActive })
             }
           >
-            <div className="feather-icon">
-              <navbarItem.icon size={14} />
-            </div>
+            <navbarItem.icon size={16} className="feather-icon" />
             <span>{navbarItem.name}</span>
           </NavLink>
         ))}
       </div>
       <div className={classnames("navbar-menu", { show: showMenu })}>
-        <div className="feather-icon close-menu-btn">
+        <div className="close-menu-btn">
           <X
+            className="feather-icon"
             onClick={() => {
               setShowMenu(false);
             }}
@@ -64,9 +64,7 @@ export default function Navbar() {
               classnames("navbar-menu-item", { active: isActive })
             }
           >
-            <div className="feather-icon">
-              <navbarItem.icon size={22} />
-            </div>{" "}
+            <navbarItem.icon size={24} className="feather-icon" />
             <span>{navbarItem.name}</span>
           </NavLink>
         ))}

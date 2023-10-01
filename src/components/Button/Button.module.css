@@ -1,0 +1,10 @@
+.container {
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--primary);
+  color: var(--text);
+  font-size: 1.25rem;
+}
