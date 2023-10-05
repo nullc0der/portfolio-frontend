@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import * as classnames from "classnames";
+import classnames from "classnames";
 
 import styles from "./RotateToText.module.css";
 import { getRandomLengthChars } from "@/lib/utils";

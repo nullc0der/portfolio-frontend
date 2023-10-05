@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import * as classnames from "classnames";
+import classnames from "classnames";
 
 type SuccessMessageProps = {
   show: boolean;

@@ -1,5 +1,5 @@
 import { Outlet, useNavigation } from "react-router-dom";
-import * as classnames from "classnames";
+import classnames from "classnames";
 
 import Navbar from "@/components/Navbar";
 import "./App.css";

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import * as classnames from "classnames";
+import classnames from "classnames";
 import { NavLink } from "react-router-dom";
 import { Code, FileText, Home, Send, Menu, X, type Icon } from "react-feather";
 

@@ -24,6 +24,14 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        checksVoidReturn: {
+          attributes: false,
+        },
+      },
+    ],
   },
   settings: {
     react: {

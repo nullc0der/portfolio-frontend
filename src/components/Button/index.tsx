@@ -1,5 +1,5 @@
 import { type PropsWithChildren } from "react";
-import * as classnames from "classnames";
+import classnames from "classnames";
 
 import styles from "./Button.module.css";
 

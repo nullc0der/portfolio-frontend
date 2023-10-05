@@ -1,12 +1,10 @@
-import * as classnames from "classnames";
+import classnames from "classnames";
 
 import ContactSVG from "@/assets/contact.svg";
 import Card from "@/components/Card";
 
 import ContactForm from "./ContactForm";
 import styles from "./Contact.module.css";
-
-//TODO: link with backend, rate limit
 
 type CardContent = {
   header: string;

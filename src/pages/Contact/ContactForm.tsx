@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import * as classnames from "classnames";
+import classnames from "classnames";
 import { Send, Trash2 } from "react-feather";
 
+import { supabase } from "@/lib/supabase";
 import Button from "@/components/Button";
 
 import SuccessMessage from "./SuccessMessage";
@@ -58,7 +59,7 @@ export default function ContactForm() {
     });
   };
 
-  const onSubmitContactForm = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmitContactForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formErrors = validateContactForm(
       ["email", "subject", "message"],
@@ -69,7 +70,13 @@ export default function ContactForm() {
     } else {
       setContactFormErrorValues(contactFormInitialErrorValues);
       setShowSuccessMessage(true);
-      console.log(contactFormValues);
+      await supabase.from("contact_form").insert({
+        name: contactFormValues.name || null,
+        email: contactFormValues.email,
+        phone_number: contactFormValues.phone || null,
+        subject: contactFormValues.subject,
+        message: contactFormValues.message,
+      });
     }
   };
 
@@ -83,7 +90,8 @@ export default function ContactForm() {
     validateFields: (keyof ContactFormValues)[]
   ): ContactFormErrorValues => {
     let errors: ContactFormErrorValues = {};
-    const emailRegEx = /^[A-Za-z0-9_!#$%&'*+/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/g;
+    const emailRegEx =
+      /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/g;
     const phoneRegEx = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s./0-9]*$/g;
     for (const field of validateFields) {
       if (

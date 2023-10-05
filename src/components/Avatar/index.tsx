@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import * as classnames from "classnames";
+import classnames from "classnames";
 
 import avatarImage from "@/assets/avatar.png";
 import styles from "./Avatar.module.css";

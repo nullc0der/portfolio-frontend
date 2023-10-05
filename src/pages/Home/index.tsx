@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import * as classnames from "classnames";
+import classnames from "classnames";
 import { Send, Linkedin, GitHub, Phone, Mail } from "react-feather";
 
 import Avatar from "@/components/Avatar";
