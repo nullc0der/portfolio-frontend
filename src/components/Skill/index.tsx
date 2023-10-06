@@ -20,7 +20,9 @@ export default function Skill({
 }: SkillProps) {
   return (
     <div
-      className={classnames(styles.container, classNames)}
+      className={classnames(styles.container, classNames, {
+        [styles.changeIcon]: changeIconOnHover,
+      })}
       onClick={() => {
         typeof onClickSkill === "function" && onClickSkill("python");
       }}

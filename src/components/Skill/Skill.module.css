@@ -5,17 +5,23 @@
   width: 40px;
   height: 40px;
   transition: all 0.3s ease-in-out;
+  &.change-icon {
+    &:hover {
+      :global {
+        .skill-img {
+          opacity: 0;
+        }
+        .add-to-filter {
+          opacity: 1;
+        }
+      }
+    }
+  }
   &:hover {
     :global {
       .skill-name {
         visibility: visible;
         transform: translateY(1.5rem);
-      }
-      .skill-img {
-        opacity: 0;
-      }
-      .add-to-filter {
-        opacity: 1;
       }
     }
     scale: 1.1;
