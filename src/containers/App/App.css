@@ -12,6 +12,7 @@
 
   --border-radius-xs: 0.25rem;
   --border-radius-sm: 0.5rem;
+  --border-radius-full: 9999px;
 
   --navbar-height: 4rem;
 
@@ -149,6 +150,10 @@ a {
 
 .align-items-center {
   align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
 }
 
 .flex-1 {

@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+  cursor: pointer;
+  border-radius: var(--border-radius-full);
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    :global {
+      .skill-name {
+        visibility: visible;
+        transform: translateY(1.5rem);
+      }
+      .skill-img {
+        opacity: 0;
+      }
+      .add-to-filter {
+        opacity: 1;
+      }
+    }
+    transform: translateX(-0.25rem);
+    scale: 1.1;
+    background-color: var(--accent);
+  }
+  :global {
+    .add-to-filter {
+      opacity: 0;
+    }
+    .skill-img,
+    .add-to-filter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 32px;
+      width: 32px;
+      object-fit: contain;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s ease-in-out;
+    }
+    .skill-name {
+      visibility: hidden;
+      font-size: 0.75rem;
+      position: absolute;
+      bottom: 0;
+      left: -0.75rem;
+      padding: 0 0.75rem;
+      background-color: var(--accent);
+      border-radius: var(--border-radius-sm);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}

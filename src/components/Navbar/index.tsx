@@ -2,6 +2,7 @@ import { useState } from "react";
 import classnames from "classnames";
 import { NavLink } from "react-router-dom";
 import { Code, FileText, Home, Send, Menu, X, type Icon } from "react-feather";
+//TODO: Add follower line around items
 
 import styles from "./Navbar.module.css";
 
