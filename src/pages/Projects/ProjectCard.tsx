@@ -27,7 +27,7 @@ export default function ProjectCard({
           accusantium.
         </p>
         <h4 className="skills-label">Primary Skills</h4>
-        <div className="skills">
+        <div className="d-flex align-items-center">
           <Skill
             showAdd={!filteredSkills.includes("python")}
             onClickSkill={toggleSkills}

@@ -4,6 +4,7 @@ import App from "@/containers/App";
 import Home from "@/pages/Home";
 import Contact from "@/pages/Contact";
 import Projects from "@/pages/Projects";
+import ProjectDetails from "@/pages/ProjectDetails";
 import ErrorBoundary from "@/components/ErrorBoundary";
 
 const router = createBrowserRouter([
@@ -22,7 +23,16 @@ const router = createBrowserRouter([
       },
       {
         path: "projects",
-        element: <Projects />,
+        children: [
+          {
+            index: true,
+            element: <Projects />,
+          },
+          {
+            path: ":id",
+            element: <ProjectDetails />,
+          },
+        ],
       },
     ],
   },

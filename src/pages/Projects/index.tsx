@@ -23,11 +23,11 @@ export default function Projects() {
       <div className="d-flex flex-col align-items-end justify-content-center filtered-skills">
         <h3>Filtered Skills</h3>
         {filteredSkills.length ? (
-          filteredSkills.map((skill) => (
-            <div key={skill} className="skills">
-              <Skill showAdd={false} onClickSkill={toggleSkills} />
-            </div>
-          ))
+          <div className="d-flex align-items-center">
+            {filteredSkills.map((skill) => (
+              <Skill showAdd={false} key={skill} onClickSkill={toggleSkills} />
+            ))}
+          </div>
         ) : (
           <p>
             No skill filtered, click on a skill on project to filter projects

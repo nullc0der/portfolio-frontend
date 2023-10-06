@@ -1,0 +1,19 @@
+.container {
+  gap: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  @media (min-width: 768px) {
+    padding-top: 5rem;
+  }
+  :global {
+    .skills,
+    .gallery {
+      gap: 1rem;
+    }
+    .gallery {
+      img {
+        width: max-content;
+      }
+    }
+  }
+}
