@@ -1,7 +1,51 @@
 import classnames from "classnames";
 
+import Gallery, { type GalleryContent } from "@/components/Gallery";
 import Skill from "@/components/Skill";
 import styles from "./ProjectDetails.module.css";
+
+const galleryContent: GalleryContent[] = [
+  {
+    type: "image",
+    contentSrc: "https://place-hold.it/300",
+  },
+  {
+    type: "image",
+    contentSrc: "https://place-hold.it/350",
+  },
+  {
+    type: "image",
+    contentSrc: "https://place-hold.it/400",
+  },
+  {
+    type: "image",
+    contentSrc: "https://place-hold.it/300",
+  },
+  {
+    type: "image",
+    contentSrc: "https://place-hold.it/500",
+  },
+  {
+    type: "image",
+    contentSrc: "https://place-hold.it/700",
+  },
+  {
+    type: "image",
+    contentSrc: "https://place-hold.it/200",
+  },
+  {
+    type: "image",
+    contentSrc: "https://place-hold.it/100",
+  },
+  {
+    type: "image",
+    contentSrc: "https://place-hold.it/200",
+  },
+  {
+    type: "image",
+    contentSrc: "https://place-hold.it/300",
+  },
+];
 
 export default function ProjectDetails() {
   return (
@@ -34,7 +78,7 @@ export default function ProjectDetails() {
       </div>
       <div className="d-flex flex-col gallery">
         <h4>Project Gallery</h4>
-        <img src="https://place-hold.it/300" />
+        <Gallery contents={galleryContent} />
       </div>
     </div>
   );

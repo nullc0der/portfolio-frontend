@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  :global {
+    .content {
+      width: 300px;
+      height: 300px;
+      cursor: pointer;
+      img {
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.popup-container {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 20, 26, 0.85);
+  :global {
+    .gallery-content {
+      position: relative;
+      .close-btn,
+      .next-btn,
+      .prev-btn {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        padding: 0.125rem;
+        background-color: rgba(15, 20, 26, 0.45);
+        border-radius: var(--border-radius-full);
+        position: absolute;
+      }
+      .close-btn {
+        top: 0.125rem;
+        right: 0.125rem;
+      }
+      .next-btn {
+        right: 0.125rem;
+        top: calc(50% - 16px);
+      }
+      .prev-btn {
+        left: 0.125rem;
+        top: calc(50% - 16px);
+      }
+      img {
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

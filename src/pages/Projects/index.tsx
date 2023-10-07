@@ -6,7 +6,7 @@ import Skill from "@/components/Skill";
 import ProjectCard from "./ProjectCard";
 import styles from "./Projects.module.css";
 
-// TODO: Add project details and image gallery
+// TODO: content, SMTP, analytics, hosting
 
 export default function Projects() {
   const [filteredSkills, setFilteredSkills] = useState<string[]>([]);
