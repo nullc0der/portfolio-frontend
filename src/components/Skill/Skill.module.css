@@ -17,6 +17,8 @@
           opacity: 1;
         }
       }
+      scale: 1.1;
+      background-color: var(--accent);
     }
   }
   &:hover {
@@ -26,8 +28,6 @@
         transform: translate(-50%, calc(-50% + 2rem));
       }
     }
-    scale: 1.1;
-    background-color: var(--accent);
   }
   :global {
     .add-to-filter {

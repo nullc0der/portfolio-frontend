@@ -25,7 +25,7 @@ export default function Projects() {
       <div className="d-flex flex-col align-items-end justify-content-center filtered-skills">
         <h3>Filtered Skills</h3>
         {filteredSkills.length ? (
-          <div className="d-flex align-items-center">
+          <div className="d-flex flex-wrap align-items-center">
             {getSkillObjs(filteredSkills).map((skill) => (
               <Skill
                 skill={skill}

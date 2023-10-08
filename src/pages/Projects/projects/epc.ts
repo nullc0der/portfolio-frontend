@@ -93,6 +93,13 @@ const epc: Project = {
     { id: 14, type: "image", src: screenshot15 },
     { id: 15, type: "image", src: screenshot16 },
     { id: 16, type: "image", src: screenshot17 },
+    {
+      id: 17,
+      type: "video",
+      thumbnailSource: screenshot1,
+      iframeSource:
+        "https://www.youtube.com/embed/I-M3rqxxglQ?si=yajHPNnA9zmVKsVO",
+    },
   ],
   githubLinks: [
     {

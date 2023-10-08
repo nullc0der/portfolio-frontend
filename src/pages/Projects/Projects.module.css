@@ -59,6 +59,7 @@
           bottom: calc(var(--project-card-gap) * -1);
         }
         .details-btn {
+          margin-top: 1rem;
           padding: 0.5rem 1rem;
           display: flex;
           justify-content: center;

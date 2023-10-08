@@ -1,16 +1,30 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 1rem;
-  justify-content: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   :global {
     .content {
-      width: 300px;
-      height: 300px;
+      position: relative;
       cursor: pointer;
       img {
         max-width: 100%;
         object-fit: contain;
+      }
+      .video-play-btn {
+        width: 18px;
+        height: 18px;
+        padding: 0.5rem;
+        background-color: var(--accent);
+        border-radius: var(--border-radius-full);
+        position: absolute;
+        top: calc(50% - 18px);
+        left: calc(50% - 18px);
       }
     }
   }

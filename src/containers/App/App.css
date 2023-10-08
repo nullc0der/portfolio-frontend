@@ -109,6 +109,8 @@ pre {
 }
 
 a {
+  color: var(--text);
+  text-decoration: none;
   .feather-icon {
     vertical-align: text-top;
   }
@@ -130,6 +132,10 @@ a {
 
 .d-flex {
   display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .flex-row {

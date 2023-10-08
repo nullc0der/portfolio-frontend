@@ -1,24 +1,20 @@
 import classnames from "classnames";
 import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { ArrowLeft, ArrowRight, X } from "react-feather";
+import { ArrowLeft, ArrowRight, Play, X } from "react-feather";
 
+import { type GallerySource } from "@/pages/Projects/projects";
 import useClickOutside from "@/lib/hooks/useClickOutSide";
 import styles from "./Gallery.module.css";
 
-export type GalleryContent = {
-  type: "image" | "video";
-  contentSrc: string;
-};
-
 type GalleryProps = {
-  contents: GalleryContent[];
+  contents: GallerySource[];
   classNames?: string;
 };
 
 type GalleryContentPopupProps = {
+  currentContent: GallerySource;
   onClickNextPrev: (isNext: boolean) => void;
-  currentContent?: GalleryContent;
   onClose: () => void;
 };
 
@@ -83,21 +79,24 @@ function GalleryContentPopup({
         >
           <ArrowLeft size={24} />
         </div>
-        {!!currentContent && <img src={currentContent.contentSrc} />}
-        {/* <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/I-M3rqxxglQ?si=FSgdg2YSiYNn4cIb"
-          title="YouTube video player"
-          style={{ border: 0 }}
-        ></iframe> */}
+        {currentContent.type === "image" ? (
+          <img src={currentContent.src} />
+        ) : (
+          <iframe
+            width="560"
+            height="315"
+            src={currentContent.iframeSource}
+            title="YouTube video player"
+            style={{ border: 0 }}
+          ></iframe>
+        )}
       </div>
     </div>
   );
 }
 
 export default function Gallery({ contents, classNames }: GalleryProps) {
-  const [currentContent, setCurrentContent] = useState<GalleryContent | null>(
+  const [currentContent, setCurrentContent] = useState<GallerySource | null>(
     null
   );
 
@@ -117,15 +116,25 @@ export default function Gallery({ contents, classNames }: GalleryProps) {
 
   return (
     <div className={classnames(styles.container, classNames)}>
-      {contents.map((content, index) => (
-        <div className="content" key={index}>
+      {contents.map((content) => (
+        <div
+          className="content"
+          key={content.id}
+          onClick={(e) => {
+            e.stopPropagation();
+            setCurrentContent(content);
+          }}
+        >
           <img
-            src={content.contentSrc}
-            onClick={(e) => {
-              e.stopPropagation();
-              setCurrentContent(content);
-            }}
+            src={
+              content.type === "image" ? content.src : content.thumbnailSource
+            }
           />
+          {content.type === "video" && (
+            <div className="video-play-btn">
+              <Play size={18} />
+            </div>
+          )}
         </div>
       ))}
       {!!currentContent &&

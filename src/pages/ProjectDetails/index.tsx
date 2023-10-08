@@ -1,85 +1,69 @@
+import { useParams } from "react-router-dom";
 import classnames from "classnames";
 
-import Gallery, { type GalleryContent } from "@/components/Gallery";
+import projects from "@/pages/Projects/projects";
+import Gallery from "@/components/Gallery";
 import Skill from "@/components/Skill";
-import styles from "./ProjectDetails.module.css";
+import { getSkillObjs } from "@/components/Skill/skills";
 
-const galleryContent: GalleryContent[] = [
-  {
-    type: "image",
-    contentSrc: "https://place-hold.it/300",
-  },
-  {
-    type: "image",
-    contentSrc: "https://place-hold.it/350",
-  },
-  {
-    type: "image",
-    contentSrc: "https://place-hold.it/400",
-  },
-  {
-    type: "image",
-    contentSrc: "https://place-hold.it/300",
-  },
-  {
-    type: "image",
-    contentSrc: "https://place-hold.it/500",
-  },
-  {
-    type: "image",
-    contentSrc: "https://place-hold.it/700",
-  },
-  {
-    type: "image",
-    contentSrc: "https://place-hold.it/200",
-  },
-  {
-    type: "image",
-    contentSrc: "https://place-hold.it/100",
-  },
-  {
-    type: "image",
-    contentSrc: "https://place-hold.it/200",
-  },
-  {
-    type: "image",
-    contentSrc: "https://place-hold.it/300",
-  },
-];
+import styles from "./ProjectDetails.module.css";
+import { GitHub } from "react-feather";
 
 export default function ProjectDetails() {
+  const { id } = useParams();
+
+  const project = projects.find((p) => p.id === Number(id));
+
   return (
-    <div className={classnames(styles.container, "page-container")}>
-      <h1>Project Name</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus rem
-        libero consequuntur deleniti veniam quis possimus molestias quaerat nemo
-        amet voluptatibus reiciendis, beatae itaque? Laborum illum assumenda
-        quod saepe excepturi? Rem consequatur similique quidem asperiores aut
-        dolore dolor dolorum quia quasi tempora cupiditate alias rerum ad
-        repellat, commodi, quos in iste aperiam. Expedita necessitatibus
-        quisquam a incidunt minima nostrum temporibus? Architecto deleniti fuga
-        officiis et distinctio sequi dolor consectetur, quae voluptas
-        praesentium ducimus sed consequatur earum amet a consequuntur cumque
-        mollitia porro id, ipsa ullam molestias, quia molestiae. Hic, qui! Ipsa
-        consequuntur, aliquid id quos quam officia incidunt molestias,
-        voluptatum et possimus magnam! Ut, repellat. Deserunt, perspiciatis
-        atque. Adipisci eaque eveniet deserunt quasi molestias! Pariatur facere
-        quia dolor neque consequuntur! Minus fuga asperiores doloremque, numquam
-        quibusdam cum dicta sapiente, eos possimus vitae corporis eaque
-        voluptas, nam pariatur laborum impedit provident dolores quod ipsam
-        architecto quos. Illum facilis itaque dolor maiores.
-      </p>
-      <div className="d-flex flex-col skills">
-        <h3>Skills Used</h3>
-        <div className="d-flex align-items-center">
-          <Skill changeIconOnHover={false} />
+    !!project && (
+      <div className={classnames(styles.container, "page-container")}>
+        <h1>{project.name}</h1>
+        <p>{project.summary}</p>
+        <div className="d-flex flex-col">
+          <h2>Key Features</h2>
+          {project.keyFeatures.map((feature, index) => (
+            <div className="project-feature" key={index}>
+              <h4>{feature.title}</h4>
+              <p>{feature.feature}</p>
+            </div>
+          ))}
+        </div>
+        <div className="d-flex flex-col">
+          <h2>Responsibilities</h2>
+          <ul className="responsibilities">
+            {project.worksDone.map((workDone, index) => (
+              <li key={index}>{workDone}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="d-flex flex-col">
+          <h2>Skills Used</h2>
+          <div className="d-flex flex-wrap align-items-center">
+            {getSkillObjs(project.skills).map((skill) => (
+              <Skill key={skill.id} changeIconOnHover={false} skill={skill} />
+            ))}
+          </div>
+        </div>
+        <div className="d-flex flex-col">
+          <h2>Project Sources</h2>
+          {project.githubLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="gh-link"
+            >
+              <GitHub size={18} className="feather-icon" />
+              {link.title}
+            </a>
+          ))}
+        </div>
+        <div className="d-flex flex-col">
+          <h2>Project Gallery</h2>
+          <Gallery contents={project.gallerySources} />
         </div>
       </div>
-      <div className="d-flex flex-col gallery">
-        <h4>Project Gallery</h4>
-        <Gallery contents={galleryContent} />
-      </div>
-    </div>
+    )
   );
 }

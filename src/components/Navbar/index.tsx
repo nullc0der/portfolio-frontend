@@ -59,6 +59,9 @@ export default function Navbar() {
         </div>
         {navbarItems.map((navbarItem, index) => (
           <NavLink
+            onClick={() => {
+              setShowMenu(false);
+            }}
             to={navbarItem.link}
             key={index}
             className={({ isActive }) =>

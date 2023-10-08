@@ -36,17 +36,17 @@ export default function ProjectCard({
         <h2 className="title">{project.name}</h2>
         <p className="summary">{project.summary}</p>
         <h4 className="skills-label">Primary Skills</h4>
-        <div className="d-flex align-items-center justify-content-between">
-          <div className="d-flex align-items-center">
-            {getSkillObjs(project.primarySkills).map((skill) => (
-              <Skill
-                key={skill.id}
-                skill={skill}
-                showAdd={!filteredSkills.includes(skill.name.toLowerCase())}
-                onClickSkill={toggleSkills}
-              />
-            ))}
-          </div>
+        <div className="d-flex flex-wrap align-items-center">
+          {getSkillObjs(project.primarySkills).map((skill) => (
+            <Skill
+              key={skill.id}
+              skill={skill}
+              showAdd={!filteredSkills.includes(skill.name.toLowerCase())}
+              onClickSkill={toggleSkills}
+            />
+          ))}
+        </div>
+        <div className="d-flex align-items-center">
           <div className="details-btn">
             <Link to={`/projects/${project.id}`}>
               <span>Details</span>

@@ -9,7 +9,7 @@ type GallerySourceBase = {
   id: number;
 };
 
-type GallerySource = GallerySourceBase &
+export type GallerySource = GallerySourceBase &
   (
     | {
         type: "image";
