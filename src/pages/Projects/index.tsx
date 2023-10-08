@@ -2,8 +2,10 @@ import { useState } from "react";
 import classnames from "classnames";
 
 import Skill from "@/components/Skill";
+import { getSkillObjs } from "@/components/Skill/skills";
 
 import ProjectCard from "./ProjectCard";
+import projects from "./projects";
 import styles from "./Projects.module.css";
 
 // TODO: content, SMTP, analytics, hosting
@@ -24,8 +26,13 @@ export default function Projects() {
         <h3>Filtered Skills</h3>
         {filteredSkills.length ? (
           <div className="d-flex align-items-center">
-            {filteredSkills.map((skill) => (
-              <Skill showAdd={false} key={skill} onClickSkill={toggleSkills} />
+            {getSkillObjs(filteredSkills).map((skill) => (
+              <Skill
+                skill={skill}
+                showAdd={false}
+                key={skill.id}
+                onClickSkill={toggleSkills}
+              />
             ))}
           </div>
         ) : (
@@ -35,18 +42,14 @@ export default function Projects() {
           </p>
         )}
       </div>
-      <ProjectCard
-        filteredSkills={filteredSkills}
-        toggleSkills={toggleSkills}
-      />
-      <ProjectCard
-        filteredSkills={filteredSkills}
-        toggleSkills={toggleSkills}
-      />
-      <ProjectCard
-        filteredSkills={filteredSkills}
-        toggleSkills={toggleSkills}
-      />
+      {projects.map((project) => (
+        <ProjectCard
+          key={project.id}
+          project={project}
+          filteredSkills={filteredSkills}
+          toggleSkills={toggleSkills}
+        />
+      ))}
     </div>
   );
 }

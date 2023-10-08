@@ -58,6 +58,25 @@
           height: var(--project-card-gap);
           bottom: calc(var(--project-card-gap) * -1);
         }
+        .details-btn {
+          padding: 0.5rem 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: var(--border-radius-full);
+          background-color: var(--accent);
+          transition: transform 0.3s ease-in-out;
+          a {
+            color: var(--text);
+            text-decoration: none;
+          }
+          .feather-icon {
+            margin-right: 0;
+          }
+          &:hover {
+            transform: translate(-3px, -5px);
+          }
+        }
       }
     }
   }

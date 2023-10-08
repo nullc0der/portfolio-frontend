@@ -84,6 +84,13 @@ function GalleryContentPopup({
           <ArrowLeft size={24} />
         </div>
         {!!currentContent && <img src={currentContent.contentSrc} />}
+        {/* <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/I-M3rqxxglQ?si=FSgdg2YSiYNn4cIb"
+          title="YouTube video player"
+          style={{ border: 0 }}
+        ></iframe> */}
       </div>
     </div>
   );
