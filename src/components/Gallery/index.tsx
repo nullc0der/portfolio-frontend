@@ -85,10 +85,10 @@ function GalleryContentPopup({
           <iframe
             width="560"
             height="315"
+            className="youtube-iframe"
             src={currentContent.iframeSource}
             title="YouTube video player"
-            style={{ border: 0 }}
-          ></iframe>
+          />
         )}
       </div>
     </div>
