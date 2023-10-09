@@ -42,6 +42,7 @@ const hmppc: Project = {
     "Redux",
     "Celery",
     "DRF",
+    "Git",
   ],
   githubLinks: [
     {

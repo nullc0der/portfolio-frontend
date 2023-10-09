@@ -58,6 +58,7 @@ const baza: Project = {
     "Nginx",
     "Celery",
     "DRF",
+    "Git",
   ],
   githubLinks: [
     { title: "Frontend", href: "https://github.com/nullc0der/baza-frontend" },

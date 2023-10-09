@@ -66,6 +66,7 @@ const epc: Project = {
     "TypeScript",
     "MongoDB",
     "Docker",
+    "Git",
   ],
   primarySkills: [
     "Flutter",

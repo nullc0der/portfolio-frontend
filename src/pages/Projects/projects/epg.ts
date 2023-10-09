@@ -66,6 +66,7 @@ const epg: Project = {
     "Dogecoin",
     "Redux",
     "Jotai",
+    "Git",
   ],
   primarySkills: ["FastAPI", "React", "Python", "TypeScript", "Redux"],
   gallerySources: [

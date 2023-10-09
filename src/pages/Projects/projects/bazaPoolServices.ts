@@ -37,6 +37,7 @@ const bazaPoolServices: Project = {
     "Redux",
     "Celery",
     "DRF",
+    "Git",
   ],
   githubLinks: [
     {
