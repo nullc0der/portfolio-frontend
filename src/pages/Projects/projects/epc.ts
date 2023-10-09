@@ -19,7 +19,7 @@ import screenshot17 from "@/assets/epc_images/screenshot_17.png";
 import { Project } from ".";
 
 const epc: Project = {
-  id: 0,
+  id: 1,
   name: "Ekata Pool Companion",
   timePeriod: {
     start: "May 2022",

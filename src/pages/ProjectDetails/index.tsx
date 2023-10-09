@@ -28,14 +28,16 @@ export default function ProjectDetails() {
             </div>
           ))}
         </div>
-        <div className="d-flex flex-col">
-          <h2>Responsibilities</h2>
-          <ul className="responsibilities">
-            {project.worksDone.map((workDone, index) => (
-              <li key={index}>{workDone}</li>
-            ))}
-          </ul>
-        </div>
+        {!!project.worksDone.length && (
+          <div className="d-flex flex-col">
+            <h2>Responsibilities</h2>
+            <ul className="responsibilities">
+              {project.worksDone.map((workDone, index) => (
+                <li key={index}>{workDone}</li>
+              ))}
+            </ul>
+          </div>
+        )}
         <div className="d-flex flex-col">
           <h2>Skills Used</h2>
           <div className="d-flex flex-wrap align-items-center">

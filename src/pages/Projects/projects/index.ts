@@ -4,6 +4,7 @@ import ekata from "./ekata";
 import epc from "./epc";
 import epg from "./epg";
 import hmppc from "./hmppc";
+import passwordPaster from "./passwordPaster";
 
 type TimePeriod = {
   start: string;
@@ -50,6 +51,14 @@ export type Project = {
   githubLinks: GithubLinks[];
 };
 
-const projects: Project[] = [epc, epg, hmppc, bazaPoolServices, baza, ekata];
+const projects: Project[] = [
+  passwordPaster,
+  epc,
+  epg,
+  hmppc,
+  bazaPoolServices,
+  baza,
+  ekata,
+];
 
 export default projects;

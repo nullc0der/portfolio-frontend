@@ -15,7 +15,7 @@ import screenshot13 from "@/assets/epg_images/screenshot_13.jpg";
 import { type Project } from ".";
 
 const epg: Project = {
-  id: 1,
+  id: 2,
   name: "Ekata Crypto Payment Processor",
   timePeriod: {
     start: "Oct 2021",

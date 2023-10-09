@@ -8,7 +8,7 @@ import screenshot5 from "@/assets/baza_images/screenshot_6.png";
 import { Project } from ".";
 
 const baza: Project = {
-  id: 4,
+  id: 5,
   name: "Baza Foundation",
   timePeriod: {
     start: "Mar 2018",
