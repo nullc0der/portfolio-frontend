@@ -1,13 +1,8 @@
 .container {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: center;
   :global {
     .content {
       position: relative;
@@ -36,6 +31,8 @@
   background-color: rgba(15, 20, 26, 0.85);
   :global {
     .gallery-content {
+      margin: auto;
+      max-width: 90vw;
       position: relative;
       .close-btn,
       .next-btn,

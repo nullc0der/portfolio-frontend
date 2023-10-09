@@ -100,6 +100,13 @@ export default function Gallery({ contents, classNames }: GalleryProps) {
     null
   );
 
+  useEffect(() => {
+    document.body.classList.remove("modal-open");
+    if (currentContent) {
+      document.body.classList.add("modal-open");
+    }
+  }, [currentContent]);
+
   const onClickNextPrev = (isNext: boolean) => {
     if (currentContent) {
       const currentIndex = contents.indexOf(currentContent);

@@ -19,6 +19,9 @@ import psql from "@/assets/skill_logos/postgresql.svg";
 import python from "@/assets/skill_logos/python.png";
 import reactjs from "@/assets/skill_logos/reactjs.svg";
 import ts from "@/assets/skill_logos/ts.svg";
+import btc from "@/assets/skill_logos/btc.svg";
+import doge from "@/assets/skill_logos/doge.svg";
+import monero from "@/assets/skill_logos/monero.svg";
 
 export type Skill = {
   id: number;
@@ -48,6 +51,9 @@ const skillObjects: Skill[] = [
   { id: 18, name: "Python", imageSrc: python },
   { id: 19, name: "React", imageSrc: reactjs },
   { id: 20, name: "TypeScript", imageSrc: ts },
+  { id: 21, name: "Bitcoin", imageSrc: btc },
+  { id: 22, name: "Dogecoin", imageSrc: doge },
+  { id: 23, name: "monero", imageSrc: monero },
 ];
 
 export const getSkillObjs = (skills: string[]) => {

@@ -31,6 +31,9 @@ body {
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
+  &.modal-open {
+    overflow-y: hidden;
+  }
 }
 
 #root,

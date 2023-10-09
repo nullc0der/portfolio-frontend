@@ -23,7 +23,7 @@ const epc: Project = {
   name: "Ekata Pool Companion",
   timePeriod: {
     start: "May 2022",
-    end: "August 2023",
+    end: "Aug 2023",
   },
   summary:
     "Ekata Pool Companion is a versatile cryptocurrency mining application that caters to both mobile (Android) and desktop (Linux, Windows) platforms using the Flutter framework. This application serves as a user-friendly tool for mining CPU and GPU mineable cryptocurrencies, making the process accessible to both beginners and experienced miners.",
