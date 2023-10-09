@@ -1,3 +1,4 @@
+import baza from "./baza";
 import bazaPoolServices from "./bazaPoolServices";
 import epc from "./epc";
 import epg from "./epg";
@@ -48,6 +49,6 @@ export type Project = {
   githubLinks: GithubLinks[];
 };
 
-const projects: Project[] = [epc, epg, hmppc, bazaPoolServices];
+const projects: Project[] = [epc, epg, hmppc, bazaPoolServices, baza];
 
 export default projects;

@@ -25,7 +25,7 @@ const bazaPoolServices: Project = {
     "Developed the backend, admin interface, and user frontend for a voting system.",
     "Configured and deployed multiple crypto mining pool.",
   ],
-  primarySkills: ["Django", "React", "Python", "Javascript"],
+  primarySkills: ["Django", "React", "Python", "Javascript", "Redux"],
   skills: [
     "Django",
     "React",
@@ -34,6 +34,9 @@ const bazaPoolServices: Project = {
     "Docker",
     "Cloudflare",
     "Nginx",
+    "Redux",
+    "Celery",
+    "DRF",
   ],
   githubLinks: [
     {

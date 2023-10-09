@@ -64,8 +64,10 @@ const epg: Project = {
     "Bitcoin",
     "Monero",
     "Dogecoin",
+    "Redux",
+    "Jotai",
   ],
-  primarySkills: ["FastAPI", "React", "Python", "TypeScript"],
+  primarySkills: ["FastAPI", "React", "Python", "TypeScript", "Redux"],
   gallerySources: [
     { id: 0, type: "image", src: screenshot1 },
     { id: 1, type: "image", src: screenshot2 },

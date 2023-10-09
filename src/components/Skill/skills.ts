@@ -22,6 +22,10 @@ import ts from "@/assets/skill_logos/ts.svg";
 import btc from "@/assets/skill_logos/btc.svg";
 import doge from "@/assets/skill_logos/doge.svg";
 import monero from "@/assets/skill_logos/monero.svg";
+import jotai from "@/assets/skill_logos/jotai-mascot.png";
+import redux from "@/assets/skill_logos/redux.svg";
+import celery from "@/assets/skill_logos/celery.svg";
+import drf from "@/assets/skill_logos/drf.png";
 
 export type Skill = {
   id: number;
@@ -54,6 +58,10 @@ const skillObjects: Skill[] = [
   { id: 21, name: "Bitcoin", imageSrc: btc },
   { id: 22, name: "Dogecoin", imageSrc: doge },
   { id: 23, name: "Monero", imageSrc: monero },
+  { id: 24, name: "Redux", imageSrc: redux },
+  { id: 25, name: "Jotai", imageSrc: jotai },
+  { id: 26, name: "Celery", imageSrc: celery },
+  { id: 27, name: "DRF", imageSrc: drf },
 ];
 
 export const getSkillObjs = (skills: string[]) => {

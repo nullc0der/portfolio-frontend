@@ -27,7 +27,7 @@ const hmppc: Project = {
     "Developed the stats app where users can pay a fee in cryptocurrency to see how many other people have used it.",
     "Implemented crypto payment processing for bitcoin, monero, dogecoin and BAZA.",
   ],
-  primarySkills: ["Django", "React", "TypeScript", "Python"],
+  primarySkills: ["Django", "React", "TypeScript", "Python", "Redux"],
   skills: [
     "Django",
     "React",
@@ -39,6 +39,9 @@ const hmppc: Project = {
     "Monero",
     "Bitcoin",
     "Dogecoin",
+    "Redux",
+    "Celery",
+    "DRF",
   ],
   githubLinks: [
     {
