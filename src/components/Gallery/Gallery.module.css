@@ -29,10 +29,12 @@
   position: fixed;
   inset: 0;
   background-color: rgba(15, 20, 26, 0.85);
+  overflow-y: auto;
   :global {
     .gallery-content {
       margin: auto;
       max-width: 90vw;
+      max-height: 90vh;
       position: relative;
       .close-btn,
       .next-btn,

@@ -53,7 +53,7 @@ const skillObjects: Skill[] = [
   { id: 20, name: "TypeScript", imageSrc: ts },
   { id: 21, name: "Bitcoin", imageSrc: btc },
   { id: 22, name: "Dogecoin", imageSrc: doge },
-  { id: 23, name: "monero", imageSrc: monero },
+  { id: 23, name: "Monero", imageSrc: monero },
 ];
 
 export const getSkillObjs = (skills: string[]) => {

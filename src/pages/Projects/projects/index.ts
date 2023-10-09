@@ -1,5 +1,6 @@
 import epc from "./epc";
 import epg from "./epg";
+import hmppc from "./hmppc";
 
 type TimePeriod = {
   start: string;
@@ -46,6 +47,6 @@ export type Project = {
   githubLinks: GithubLinks[];
 };
 
-const projects: Project[] = [epc, epg];
+const projects: Project[] = [epc, epg, hmppc];
 
 export default projects;
