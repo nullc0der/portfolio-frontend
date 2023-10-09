@@ -45,7 +45,7 @@ export default function ProjectDetails() {
           </div>
         </div>
         <div className="d-flex flex-col">
-          <h2>Project Sources</h2>
+          <h2>Project Source Codes</h2>
           {project.githubLinks.map((link, index) => (
             <a
               key={index}
@@ -59,10 +59,12 @@ export default function ProjectDetails() {
             </a>
           ))}
         </div>
-        <div className="d-flex flex-col">
-          <h2>Project Gallery</h2>
-          <Gallery contents={project.gallerySources} />
-        </div>
+        {!!project.gallerySources.length && (
+          <div className="d-flex flex-col">
+            <h2>Project Gallery</h2>
+            <Gallery contents={project.gallerySources} />
+          </div>
+        )}
       </div>
     )
   );
