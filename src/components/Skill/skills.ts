@@ -26,6 +26,9 @@ import jotai from "@/assets/skill_logos/jotai-mascot.png";
 import redux from "@/assets/skill_logos/redux.svg";
 import celery from "@/assets/skill_logos/celery.svg";
 import drf from "@/assets/skill_logos/drf.png";
+import mui from "@/assets/skill_logos/mui.svg";
+import bootstrap from "@/assets/skill_logos/bootstrap.svg";
+import tailwind from "@/assets/skill_logos/tailwindcss.svg";
 
 export type Skill = {
   id: number;
@@ -62,6 +65,9 @@ const skillObjects: Skill[] = [
   { id: 25, name: "Jotai", imageSrc: jotai },
   { id: 26, name: "Celery", imageSrc: celery },
   { id: 27, name: "DRF", imageSrc: drf },
+  { id: 28, name: "MUI", imageSrc: mui },
+  { id: 29, name: "Bootstrap", imageSrc: bootstrap },
+  { id: 30, name: "Tailwind", imageSrc: tailwind },
 ];
 
 export const getSkillObjs = (skills: string[]) => {

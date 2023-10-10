@@ -5,7 +5,7 @@ import screenshot3 from "@/assets/baza_images/screenshot_4.png";
 import screenshot4 from "@/assets/baza_images/screenshot_5.png";
 import screenshot5 from "@/assets/baza_images/screenshot_6.png";
 
-import { Project } from ".";
+import { type Project } from ".";
 
 const baza: Project = {
   id: 5,
@@ -46,7 +46,14 @@ const baza: Project = {
     "Forked and customized TurtleCoin for BAZA coin.",
     "Set up a mail server, GitLab, and taiga server for internal use, following the client's requirements.",
   ],
-  primarySkills: ["Django", "React", "Redux", "Python", "Javascript"],
+  primarySkills: [
+    "Django",
+    "React",
+    "Redux",
+    "Python",
+    "Javascript",
+    "Bootstrap",
+  ],
   skills: [
     "Django",
     "React",
@@ -59,6 +66,7 @@ const baza: Project = {
     "Celery",
     "DRF",
     "Git",
+    "Bootstrap",
   ],
   githubLinks: [
     { title: "Frontend", href: "https://github.com/nullc0der/baza-frontend" },

@@ -30,13 +30,14 @@
       }
       .main-content {
         position: relative;
+        padding: 2rem;
         background: linear-gradient(
           90deg,
           rgba(15, 20, 26, 0.8) 10%,
           rgba(15, 20, 26, 0) 98%
         );
         .skills-label {
-          margin-top: 1rem;
+          margin-bottom: 0.5rem;
         }
         &:hover {
           box-shadow: none;
@@ -59,12 +60,11 @@
           bottom: calc(var(--project-card-gap) * -1);
         }
         .details-btn {
-          margin-top: 1rem;
           padding: 0.5rem 1rem;
           display: flex;
           justify-content: center;
           align-items: center;
-          border-radius: var(--border-radius-full);
+          border-radius: var(--border-radius-xs);
           background-color: var(--accent);
           transition: transform 0.3s ease-in-out;
           a {
@@ -72,6 +72,7 @@
             text-decoration: none;
           }
           .feather-icon {
+            margin-left: 0.25rem;
             margin-right: 0;
           }
           &:hover {

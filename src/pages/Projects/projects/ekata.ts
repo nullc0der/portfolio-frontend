@@ -1,4 +1,4 @@
-import { Project } from ".";
+import { type Project } from ".";
 
 const ekata: Project = {
   id: 6,
@@ -41,6 +41,7 @@ const ekata: Project = {
     "Nginx",
     "Celery",
     "Git",
+    "Bootstrap",
   ],
   githubLinks: [
     {

@@ -1,6 +1,6 @@
-import screenshot0 from "@/assets/password_paster_images/screenshot_o.png";
+import screenshot0 from "@/assets/password_paster_images/screenshot_0.png";
 
-import { Project } from ".";
+import { type Project } from ".";
 
 const passwordPaster: Project = {
   id: 0,

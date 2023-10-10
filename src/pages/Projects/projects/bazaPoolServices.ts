@@ -1,4 +1,4 @@
-import { Project } from ".";
+import { type Project } from ".";
 
 const bazaPoolServices: Project = {
   id: 4,
@@ -38,6 +38,7 @@ const bazaPoolServices: Project = {
     "Celery",
     "DRF",
     "Git",
+    "Bootstrap",
   ],
   githubLinks: [
     {

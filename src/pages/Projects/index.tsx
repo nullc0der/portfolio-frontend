@@ -5,19 +5,27 @@ import Skill from "@/components/Skill";
 import { getSkillObjs } from "@/components/Skill/skills";
 
 import ProjectCard from "./ProjectCard";
-import projects from "./projects";
+import initialProjects, { type Project } from "./projects";
 import styles from "./Projects.module.css";
 
-// TODO: content, SMTP, analytics, hosting, filter
+// TODO: SMTP, analytics, hosting
 
 export default function Projects() {
   const [filteredSkills, setFilteredSkills] = useState<string[]>([]);
+  const [projects, setProjects] = useState<Project[]>(initialProjects);
 
   const toggleSkills = (skill: string) => {
     const skills = filteredSkills.includes(skill)
       ? filteredSkills.filter((s) => s !== skill)
       : [...filteredSkills, skill];
+    let projects = initialProjects;
+    if (skills.length) {
+      projects = projects.filter((project) =>
+        project.skills.some((skill) => skills.includes(skill.toLowerCase()))
+      );
+    }
     setFilteredSkills(skills);
+    setProjects(projects);
   };
 
   return (
@@ -37,8 +45,8 @@ export default function Projects() {
           </div>
         ) : (
           <p>
-            No skill filtered, click on a skill on project to filter projects
-            with that skill
+            Click on a skill listed on project to filter projects with that
+            skill
           </p>
         )}
       </div>

@@ -25,7 +25,8 @@ export default function Skill({
       className={classnames(styles.container, classNames, {
         [styles.changeIcon]: changeIconOnHover,
       })}
-      onClick={() => {
+      onClick={(e) => {
+        e.stopPropagation();
         typeof onClickSkill === "function" &&
           onClickSkill(skill.name.toLowerCase());
       }}

@@ -35,16 +35,18 @@ export default function ProjectCard({
       <Card classNames="main-content">
         <h2 className="title">{project.name}</h2>
         <p className="summary">{project.summary}</p>
-        <h4 className="skills-label">Primary Skills</h4>
-        <div className="d-flex flex-wrap align-items-center">
-          {getSkillObjs(project.primarySkills).map((skill) => (
-            <Skill
-              key={skill.id}
-              skill={skill}
-              showAdd={!filteredSkills.includes(skill.name.toLowerCase())}
-              onClickSkill={toggleSkills}
-            />
-          ))}
+        <div className="d-flex flex-col">
+          <h4 className="skills-label">Primary Skills</h4>
+          <div className="d-flex flex-wrap align-items-center">
+            {getSkillObjs(project.primarySkills).map((skill) => (
+              <Skill
+                key={skill.id}
+                skill={skill}
+                showAdd={!filteredSkills.includes(skill.name.toLowerCase())}
+                onClickSkill={toggleSkills}
+              />
+            ))}
+          </div>
         </div>
         <div className="d-flex align-items-center">
           <div className="details-btn">

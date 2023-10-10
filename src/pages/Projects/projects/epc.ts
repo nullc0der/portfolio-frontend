@@ -16,7 +16,7 @@ import screenshot15 from "@/assets/epc_images/screenshot_15.png";
 import screenshot16 from "@/assets/epc_images/screenshot_16.png";
 import screenshot17 from "@/assets/epc_images/screenshot_17.png";
 
-import { Project } from ".";
+import { type Project } from ".";
 
 const epc: Project = {
   id: 1,

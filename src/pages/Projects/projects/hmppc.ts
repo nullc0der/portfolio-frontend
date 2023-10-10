@@ -1,6 +1,6 @@
 import screenshot0 from "@/assets/hmppc_images/screenshot_0.png";
 
-import { Project } from ".";
+import { type Project } from ".";
 
 const hmppc: Project = {
   id: 3,
@@ -43,6 +43,7 @@ const hmppc: Project = {
     "Celery",
     "DRF",
     "Git",
+    "Bootstrap",
   ],
   githubLinks: [
     {
