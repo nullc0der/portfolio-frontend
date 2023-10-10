@@ -5,6 +5,7 @@ import Home from "@/pages/Home";
 import Contact from "@/pages/Contact";
 import Projects from "@/pages/Projects";
 import ProjectDetails from "@/pages/ProjectDetails";
+import Resume from "@/pages/Resume";
 import ErrorBoundary from "@/components/ErrorBoundary";
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
             element: <ProjectDetails />,
           },
         ],
+      },
+      {
+        path: "resume",
+        element: <Resume />,
       },
     ],
   },

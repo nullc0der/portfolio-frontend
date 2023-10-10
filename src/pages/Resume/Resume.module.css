@@ -1,0 +1,43 @@
+.container {
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  :global {
+    .resume-download-section {
+      align-items: center;
+      .download-button {
+        max-width: max-content;
+        transition: box-shadow 0.3s ease-in-out;
+        .feather-icon {
+          vertical-align: unset;
+        }
+        &:hover {
+          box-shadow: 0 20px 80px -10px var(--primary);
+        }
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+      @media (min-width: 768px) {
+        align-items: start;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .resume-illustration-section {
+      img {
+        width: 128px;
+        height: 128px;
+        @media (min-width: 768px) {
+          width: 256px;
+          height: 256px;
+        }
+      }
+    }
+  }
+}

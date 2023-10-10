@@ -93,13 +93,9 @@ pre {
   flex-direction: column;
   min-height: 100%;
   max-width: 80rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   margin: 0 auto;
-  @media (min-width: 640px) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
   @media (min-width: 768px) {
     padding-left: 2rem;
     padding-right: 2rem;
