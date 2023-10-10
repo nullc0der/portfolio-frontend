@@ -71,6 +71,7 @@ const baza: Project = {
   githubLinks: [
     { title: "Frontend", href: "https://github.com/nullc0der/baza-frontend" },
     { title: "Backend", href: "https://github.com/nullc0der/baza-backend" },
+    { title: "BAZA Coin", href: "https://github.com/nullc0der/baza-coin" },
   ],
   gallerySources: [
     { id: 0, type: "image", src: screenshot0 },

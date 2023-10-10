@@ -31,17 +31,17 @@ const epc: Project = {
     {
       title: "Multi-Platform Compatibility",
       feature:
-        "It is available on Android mobile devices and desktop computers running Linux and Windows operating systems, ensuring a wide user base",
+        "It is available on Android mobile devices and desktop computers running Linux and Windows operating systems, ensuring a wide user base.",
     },
     {
       title: "Mining Backend Integration",
       feature:
-        "It is seamlessly integrated with three powerful mining backends, namely xmrig, xmrigcc, and ccminer, allowing users to choose the most suitable option for their mining needs",
+        "It is seamlessly integrated with three powerful mining backends, namely xmrig, xmrigcc, and ccminer, allowing users to choose the most suitable option for their mining needs.",
     },
     {
       title: "Configuration Wizard",
       feature:
-        "To simplify the setup process, there is a user-friendly miner configuration generation wizard. This wizard guides users through the configuration process step by step, making it easy for even novices to get started with cryptocurrency mining",
+        "To simplify the setup process, there is a user-friendly miner configuration generation wizard. This wizard guides users through the configuration process step by step, making it easy for even novices to get started with cryptocurrency mining.",
     },
     {
       title: "Cloud Configuration Storage",

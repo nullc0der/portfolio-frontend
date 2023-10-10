@@ -8,7 +8,7 @@ const bazaPoolServices: Project = {
     end: "Dec 2020",
   },
   summary:
-    "Baza Pool Services is a dynamic voting system tailored for cryptocurrency mining pool hosting. This platform empowers users to actively engage in the selection process of cryptocurrency mining pool by casting their votes during monthly voting windows. Once each voting window concludes, the winning cryptocurrencies mining pool is granted hosting.",
+    "Baza Pool Services is a dynamic voting system tailored for cryptocurrency mining pool hosting. This platform empowers users to actively engage in the selection process of cryptocurrency mining pool by casting their votes during monthly voting windows. Once each voting window concludes, the winning cryptocurrencies mining pool is granted for hosting.",
   keyFeatures: [
     {
       title: "Monthly Voting Windows",

@@ -8,7 +8,7 @@ import ProjectCard from "./ProjectCard";
 import initialProjects, { type Project } from "./projects";
 import styles from "./Projects.module.css";
 
-// TODO: SMTP, analytics, hosting
+// TODO: SMTP, analytics, hosting, resume page, code splitting and optimizations, add link in resume
 
 export default function Projects() {
   const [filteredSkills, setFilteredSkills] = useState<string[]>([]);
