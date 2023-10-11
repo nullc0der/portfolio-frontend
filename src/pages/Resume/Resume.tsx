@@ -26,6 +26,19 @@ export default function Resume() {
             <span>Download Resume</span>
           </Button>
         </a>
+        <div className="github-link">
+          <p>
+            Interested in exploring the source code of this portfolio site? You
+            can find it right here
+          </p>
+          <a
+            href="https://github.com/nullc0der/portfolio-frontend"
+            target="_blank"
+            rel="noreferrer"
+          >
+            https://github.com/nullc0der/portfolio-frontend
+          </a>
+        </div>
       </div>
     </div>
   );
