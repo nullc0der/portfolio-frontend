@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 
+import "@fontsource-variable/inter";
+
 import router from "@/lib/router";
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
