@@ -46,7 +46,7 @@ export default function ContactForm() {
     if (showSuccessMessage) {
       setTimeout(() => {
         setShowSuccessMessage(false);
-      }, 3 * 1000);
+      }, 10 * 1000);
     }
   }, [showSuccessMessage]);
 

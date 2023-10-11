@@ -42,7 +42,7 @@ export default function Contact() {
   return (
     <div className={classnames(styles.container, "page-container")}>
       <div className="pure-g">
-        <div className="pure-u-1 pure-u-md-1-2 d-flex flex-col welcome">
+        <div className="pure-u-1 pure-u-md-1-2 d-flex flex-col justify-content-center welcome">
           <h1>Hey There,</h1>
           <h4>
             Whether you&apos;re interested in hiring me for a project,
