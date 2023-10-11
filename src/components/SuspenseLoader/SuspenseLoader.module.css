@@ -1,0 +1,8 @@
+.container {
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 64px;
+    height: 64px;
+  }
+}
