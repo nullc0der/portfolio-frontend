@@ -7,7 +7,7 @@ export default function SuspenseLoader() {
   return (
     <div className={classnames(styles.container, "page-container")}>
       <img src={loaderSVG} />
-      <span>Loading necessary files</span>
+      <span>Loading necessary content</span>
     </div>
   );
 }
