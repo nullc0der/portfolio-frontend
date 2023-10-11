@@ -8,8 +8,6 @@ import ProjectCard from "./ProjectCard";
 import initialProjects, { type Project } from "./projects";
 import styles from "./Projects.module.css";
 
-// TODO: SMTP, analytics, hosting
-
 export default function Projects() {
   const [filteredSkills, setFilteredSkills] = useState<string[]>([]);
   const [projects, setProjects] = useState<Project[]>(initialProjects);
