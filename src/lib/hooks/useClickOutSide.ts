@@ -1,6 +1,6 @@
 import React from "react";
 
-const useClickOutside = <T extends HTMLElement = HTMLElement>(
+export const useClickOutside = <T extends HTMLElement = HTMLElement>(
   ref: React.RefObject<T>,
   callback: () => void
 ) => {
@@ -18,5 +18,3 @@ const useClickOutside = <T extends HTMLElement = HTMLElement>(
     };
   }, [ref, callback]);
 };
-
-export default useClickOutside;

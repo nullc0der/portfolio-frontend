@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import { ArrowLeft, ArrowRight, Play, X } from "react-feather";
 
 import { type GallerySource } from "@/pages/Projects/projects";
-import useClickOutside from "@/lib/hooks/useClickOutSide";
+import { useClickOutside, useSwipe } from "@/lib/hooks";
 import styles from "./Gallery.module.css";
 
 type GalleryProps = {
@@ -50,6 +50,16 @@ function GalleryContentPopup({
 
   useClickOutside(ref, onClose);
 
+  const onSwipeLeft = () => {
+    onClickNextPrev(true);
+  };
+
+  const onSwipeRight = () => {
+    onClickNextPrev(false);
+  };
+
+  const swipeHandlers = useSwipe(onSwipeLeft, onSwipeRight);
+
   return (
     <div
       className={classnames(
@@ -58,6 +68,7 @@ function GalleryContentPopup({
         "align-items-center",
         "justify-content-center"
       )}
+      {...swipeHandlers}
     >
       <div className="gallery-content" ref={ref}>
         <div className="close-btn" onClick={onClose}>
