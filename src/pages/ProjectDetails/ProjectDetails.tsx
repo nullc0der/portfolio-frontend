@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import classnames from "classnames";
 
@@ -11,6 +12,12 @@ import { GitHub } from "react-feather";
 
 export default function ProjectDetails() {
   const { id } = useParams();
+
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove("modal-open");
+    };
+  }, []);
 
   const project = projects.find((p) => p.id === Number(id));
 

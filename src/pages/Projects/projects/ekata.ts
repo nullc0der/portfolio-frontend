@@ -39,7 +39,6 @@ const ekata: Project = {
     "Python",
     "Javascript",
     "Nginx",
-    "Celery",
     "Git",
     "Bootstrap",
   ],

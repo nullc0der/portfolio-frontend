@@ -83,8 +83,6 @@ function GalleryContentPopup({
           <img src={currentContent.src} />
         ) : (
           <iframe
-            width="560"
-            height="315"
             className="youtube-iframe"
             src={currentContent.iframeSource}
             title="YouTube video player"
