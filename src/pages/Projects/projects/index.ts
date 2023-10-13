@@ -1,6 +1,7 @@
 import baza from "./baza";
 import bazaPoolServices from "./bazaPoolServices";
 import ekata from "./ekata";
+import ekataAuth from "./ekataauth";
 import epc from "./epc";
 import epg from "./epg";
 import hmppc from "./hmppc";
@@ -58,6 +59,7 @@ const projects: Project[] = [
   hmppc,
   bazaPoolServices,
   baza,
+  ekataAuth,
   ekata,
 ];
 

@@ -1,7 +1,7 @@
 import { type Project } from ".";
 
 const ekata: Project = {
-  id: 6,
+  id: 7,
   name: "Ekata Social",
   timePeriod: {
     start: "Aug 2016",

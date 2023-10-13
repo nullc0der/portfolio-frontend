@@ -7,11 +7,9 @@ import "@fontsource-variable/inter";
 
 import router from "@/lib/router";
 
-if (import.meta.env.PROD) {
-  Sentry.init({
-    dsn: import.meta.env.VITE_SENTRY_DSN,
-  });
-}
+Sentry.init({
+  dsn: import.meta.env.VITE_SENTRY_DSN,
+});
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 ReactDOM.createRoot(document.getElementById("root")!).render(
