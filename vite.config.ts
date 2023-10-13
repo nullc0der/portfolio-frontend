@@ -1,4 +1,5 @@
 import { defineConfig, splitVendorChunkPlugin } from "vite";
+import { sentryVitePlugin } from "@sentry/vite-plugin";
 import react from "@vitejs/plugin-react-swc";
 import checker from "vite-plugin-checker";
 import viteImagemin from "vite-plugin-imagemin";
@@ -52,10 +53,18 @@ export default defineConfig({
       },
     }),
     visualizer({ filename: "rollup_visualizer/stats.html", open: true }),
+    sentryVitePlugin({
+      org: process.env.SENTRY_ORG,
+      project: process.env.SENTRY_PROJECT,
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+    }),
   ],
   css: {
     modules: {
       localsConvention: "camelCaseOnly",
     },
+  },
+  build: {
+    sourcemap: true,
   },
 });
