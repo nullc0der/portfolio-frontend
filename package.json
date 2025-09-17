@@ -37,8 +37,7 @@
     "rollup-plugin-visualizer": "^5.9.2",
     "typescript": "^5.0.2",
     "typescript-plugin-css-modules": "^5.0.1",
-    "vite": "^4.4.5",
-    "vite-plugin-checker": "^0.6.2",
-    "vite-plugin-imagemin": "^0.6.1"
+    "vite": "^7.1.5",
+    "vite-plugin-checker": "^0.6.2"
   }
 }

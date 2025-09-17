@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import classnames from "classnames";
 
-import projects from "@/pages/Projects/projects";
+import projects from "@/pages/Projects/projectsInfo";
 import Gallery from "@/components/Gallery";
 import Skill from "@/components/Skill";
 import { getSkillObjs } from "@/components/Skill/skills";

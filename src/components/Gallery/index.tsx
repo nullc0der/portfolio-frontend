@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Play } from "react-feather";
 
-import { type GallerySource } from "@/pages/Projects/projects";
+import { type GallerySource } from "@/pages/Projects/projectsInfo";
 import GalleryContentPopup from "./GalleryContentPopup";
 import styles from "./Gallery.module.css";
 

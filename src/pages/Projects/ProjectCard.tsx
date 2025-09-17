@@ -5,7 +5,7 @@ import Skill from "@/components/Skill";
 import { getSkillObjs } from "@/components/Skill/skills";
 import Card from "@/components/Card";
 
-import { type Project } from "./projects";
+import { type Project } from "./projectsInfo";
 
 type ProjectCardProps = {
   project: Project;

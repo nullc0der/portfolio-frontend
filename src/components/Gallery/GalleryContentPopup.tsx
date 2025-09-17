@@ -2,7 +2,7 @@ import classnames from "classnames";
 import { useState, useRef, useEffect } from "react";
 import { ArrowLeft, ArrowRight, X } from "react-feather";
 
-import { type GallerySource } from "@/pages/Projects/projects";
+import { type GallerySource } from "@/pages/Projects/projectsInfo";
 import { useClickOutside, useSwipe } from "@/lib/hooks";
 import styles from "./Gallery.module.css";
 

@@ -5,7 +5,7 @@ import Skill from "@/components/Skill";
 import { getSkillObjs } from "@/components/Skill/skills";
 
 import ProjectCard from "./ProjectCard";
-import initialProjects, { type Project } from "./projects";
+import initialProjects, { type Project } from "./projectsInfo";
 import styles from "./Projects.module.css";
 
 export default function Projects() {
