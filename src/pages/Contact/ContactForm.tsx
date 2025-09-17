@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import classnames from "classnames";
-import { Send, Trash2 } from "react-feather";
+import { Send, Linkedin, Phone, Mail, Trash2 } from "react-feather";
 
 import { supabase } from "@/lib/supabase";
 import Button from "@/components/Button";
@@ -46,6 +46,7 @@ export default function ContactForm() {
     if (showSuccessMessage) {
       setTimeout(() => {
         setShowSuccessMessage(false);
+        setContactFormValues(contactFormInitialValues);
       }, 10 * 1000);
     }
   }, [showSuccessMessage]);
@@ -120,6 +121,24 @@ export default function ContactForm() {
   return (
     <div className="contact-form">
       <h2 className="header">Contact Me</h2>
+      <div className="separator" />
+      <div className="contact-buttons d-flex align-items-center">
+        <a
+          href="https://www.linkedin.com/in/prasantak/"
+          target="_blank"
+          className="contact-link"
+          rel="noreferrer"
+        >
+          <Linkedin size={24} className="feather-icon" />
+        </a>
+        <a href="tel:+919954707983" className="contact-link">
+          <Phone size={24} className="feather-icon" />
+        </a>
+        <a href="mailto:prasantakakati1994@gmail.com" className="contact-link">
+          <Mail size={24} className="feather-icon" />
+        </a>
+      </div>
+      <p>Or fill this form and I will get back to you</p>
       <form
         className="form"
         onSubmit={onSubmitContactForm}
